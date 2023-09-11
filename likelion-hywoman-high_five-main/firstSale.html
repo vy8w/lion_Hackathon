@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- {% load static %} -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 할인 상품(7/26 ~ 8/8 할인)</title>
+    <!-- 모달창 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="{% static './js/FirstSale.js' %}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="firstSale.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <div id="header">
+        <header>
+            <img src="logo.png" alt="">
+        </header>
+    </div>
+    <div id="nav">
+        <nav>
+            <div class="navGroup nav-bck" id="navA">
+                <!-- <img src="img/rice-kimchi.png" alt="rice and kimchi"> -->
+                <!-- <img src="img/rice-kimchi.png" alt=""> -->
+                <a href="#" class="aColor"><p>신선식품</p></a>
+            </div>
+            <div class="navGroup nav-bck" id="navB">
+                <!-- <img src="img/fruit-vegetable.png" alt="fruit and vegetable"> -->
+                <!-- <img src="img/fruit-vegetable.png" alt=""> -->
+                <a href="#" class="aColor"><p>가공식품</p></a>
+            </div>
+            <div class="navGroup nav-bck" id="navC">
+                <!-- <img src="img/meat-seafood.png" alt="meat and seafood"> -->
+                <!-- <img src="img/meat-seafood.png" alt=""> -->
+                <a href="#" class="aColor"><p>생활용품</p></a>
+            </div>
+            <div class="navGroup nav-bck" id="navD">
+                <a href="firstSale.html"><p>🏠</p></a>
+            </div>
+        </nav>
+    </div>
+        <div id="container">
+        <div class="grid-sizer"></div>
+        <div id="saleProduct" class="grid">
+            <!-- {% for product in filtered_products %} -->
+            <div class="productGroup">
+                <div class="product">
+                    <!-- <h3>{{ product.product_name }}</h3> -->
+                    <p>맛있는 풋사과</p>
+                </div>
+                <!-- {% load humanize %} -->
+                <div class="contents">
+                    <div class="img">
+                        <!-- <img src="{{ product.product_image.url }}" alt=""> -->
+                        <img src="img/frozenFood-snack.png" alt="">
+                    </div>
+                    <div class="price">
+                        <!-- <p class="original">{{ product.regular_price | floatformat:'0' | intcomma }}원</p>
+                        <p class="salePrice">{{ product.discount_price | floatformat:'0' | intcomma }}원</p> -->
+                        <p class="original">25000원</p>
+                        <p class="salePrice">20000원</p>
+                    </div>
+                </div>
+            </div>
+            <div class="productGroup">
+                <div class="product">
+                    <!-- <h3>{{ product.product_name }}</h3> -->
+                    <p>맛있는 풋사과</p>
+                </div>
+                <!-- {% load humanize %} -->
+                <div class="contents">
+                    <div class="img">
+                        <!-- <img src="{{ product.product_image.url }}" alt=""> -->
+                        <img src="img/etc.png" alt="">
+                    </div>
+                    <div class="price">
+                        <!-- <p class="original">{{ product.regular_price | floatformat:'0' | intcomma }}원</p>
+                        <p class="salePrice">{{ product.discount_price | floatformat:'0' | intcomma }}원</p> -->
+                        <p class="original">25000원</p>
+                        <p class="salePrice">20000원</p>
+                    </div>
+                </div>
+            </div>
+            <div class="productGroup">
+                <div class="product">
+                    <!-- <h3>{{ product.product_name }}</h3> -->
+                    <p>맛있는 풋사과</p>
+                </div>
+                <!-- {% load humanize %} -->
+                <div class="contents">
+                    <div class="img">
+                        <!-- <img src="{{ product.product_image.url }}" alt=""> -->
+                        <img src="img/rice-kimchi.png" alt="">
+                    </div>
+                    <div class="price">
+                        <!-- <p class="original">{{ product.regular_price | floatformat:'0' | intcomma }}원</p>
+                        <p class="salePrice">{{ product.discount_price | floatformat:'0' | intcomma }}원</p> -->
+                        <p class="original">25000원</p>
+                        <p class="salePrice">20000원</p>
+                    </div>
+                </div>
+            </div>
+            <!-- {% empty %} -->
+            <!-- {% endfor %} -->
+        </div>
+        <footer>
+            <p id="noProduct">선택한 카테고리에 해당하는 상품이 없습니다.</p>
+        </footer>
+        <script src="firstSale.js"></script>
+    </div>
+</body>

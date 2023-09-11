@@ -1,0 +1,125 @@
+@media (max-width: 1024px){
+    body{
+        margin: 0;
+        main{
+            section{
+                #subTitle{
+                    font-size: 40px;
+                }
+                p{
+                    font-size: 50px;
+                }
+                #table{
+                    grid-template-columns: 0.7fr 0.7fr 1fr 1fr;
+                    div{
+                        font-size: 40px;
+                    }
+                }
+                .item-block {
+                    grid-template-columns: 0.7fr 0.7fr 1fr 1fr;
+                    .product{
+                        grid-template-columns: repeat(1, 1fr);
+                        grid-template-rows: repeat(2, 1fr);
+                        grid-template-areas: 'g' 'h';
+                        place-items: center;
+                        .blockImg{
+                            padding: 0;
+                            text-align: center;
+                            img{
+                                margin: auto;
+                                width: 90%;
+                                height: 90%;
+                            }
+                        }
+                        .blockName{
+                            display: block;
+                            position: inherit;
+                            p{
+                                position: inherit;
+                                transform: translate(0%);
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                padding: 0;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #footer{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 'k' 'l';
+            #total{
+                p{
+                    font-size: 55px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        margin: 0;
+        main{
+            section{
+                #subTitle{
+                    font-size: 25px;
+                }
+                p{
+                    font-size: 35px;
+                }
+                #table{
+                    grid-template-columns: 0.7fr 0.7fr 1fr 1fr;
+                    div{
+                        font-size: 25px;
+                    }
+                }
+                .item-block {
+                    grid-template-columns: 0.7fr 0.7fr 1fr 1fr;
+                    .product{
+                        grid-template-columns: repeat(1, 1fr);
+                        grid-template-rows: repeat(2, 1fr);
+                        grid-template-areas: 'g' 'h';
+                        place-items: center;
+                        .blockImg{
+                            padding: 0;
+                            text-align: center;
+                            img{
+                                margin: auto;
+                                width: 90%;
+                                height: 90%;
+                            }
+                        }
+                        .blockName{
+                            display: block;
+                            position: inherit;
+                            p{
+                                position: inherit;
+                                transform: translate(0%);
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                padding: 0;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #footer{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: 'k' 'l';
+            #total{
+                p{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

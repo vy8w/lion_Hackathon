@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "TheJamsil5Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f9f5 !important;
+}
+body #header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #header header {
+  margin: auto;
+  padding: 32px 0 1.5rem;
+}
+body #header header p {
+  display: inline;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "TheJamsil5Bold";
+}
+body main {
+  font-family: "Pretendard-Regular";
+  padding: 1.5rem;
+}
+body main #container table {
+  background-color: rgb(88, 197, 80);
+  width: 100%;
+  border-radius: 20px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.164);
+  text-align: center;
+}
+body main #container table tr th {
+  font-size: 40px;
+  letter-spacing: 3px;
+  height: 50px;
+  padding: 1rem;
+  border-right: 1px solid #ccc;
+}
+body main #container table tr th:nth-child(4) {
+  border-right: none;
+}
+body main #container table tbody tr td {
+  font-size: 35px;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  padding: 1rem;
+}
+body main #container table tbody tr td:nth-child(4) {
+  border-right: none;
+}
+body #footer {
+  font-family: "Pretendard-Regular";
+  margin: 60px 0;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "a b";
+}
+body #footer #barcode {
+  grid-area: a;
+  margin: auto;
+}
+body #footer #barcode .modal-content {
+  text-align: center;
+}
+body #footer #barcode .modal-content .modal-footer button {
+  margin: auto;
+}
+body #footer #total {
+  grid-area: b;
+  position: relative;
+}
+body #footer #total p {
+  font-size: 35px;
+  font-weight: bold;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0 200px;
+  }
+  
+  header {
+    /* border: 1px solid red; */
+  }
+  
+  header h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .container a {
+    text-decoration: none;
+    color: #000;
+  }
+  .container a .sale {
+    /* border: 1px solid red; */
+    margin: 40px;
+    padding: 20px 0;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+  }
+  .container a .sale p {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      margin: 0;
+    }
+  }

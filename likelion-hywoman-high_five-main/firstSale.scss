@@ -1,0 +1,139 @@
+@font-face {
+    font-family: "TheJamsil5Bold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-style: normal;
+}
+@mixin translate($location: (-50%, -50%)){
+    // 정가운데 정렬 코드 - 부모를 기준으로
+    position: absolute;   // 부모 relative를 기준으로 삼음
+    transform: translate($location);   // 
+    left: 50%;
+    top: 50%;
+}
+
+// web page
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0 80px;
+    background-color: #fafafa;
+    font-family: "Pretendard-Regular";
+    #header{
+        margin: 50px 0;
+        header{
+            p{
+                font-family: "TheJamsil5Bold";
+                font-size: 60px;
+            }
+        }
+    }
+    #nav{
+        nav{
+            margin-bottom: 60px;
+            // flex: 화면 size 줄이면 자연스럽게 content가 물 흐르듯이 정렬
+            display: flex;   // 한 줄로 정렬
+            flex-flow: row-wrap;   // 가로로 wrap
+            .navGroup{
+                flex-grow: 1;   // 웹페이지 전체너비에서 margin 뺀 만큼 너비 꽉 차게
+                img{
+                    height: 60px;
+                }
+                // a태그 클릭 시 변경될 클래스
+                .aClick{
+                    color: green;
+                    font-weight: 700;
+                }
+                a{
+                    color: #000;
+                    text-decoration: none;
+                    &:hover{
+                        // 마우스 hover시 밑줄 없앰
+                        text-decoration: none;
+                    }
+                    p{
+                        display: inline;   // img 옆에 상품명 정렬
+                        vertical-align: middle;   // 정가운데 정렬
+                        margin: 0 10px;
+                        font-size: 25px;
+                    }
+                }
+            }
+            #navF{
+                // '전체 보기' 정가운데 정렬 코드 3줄
+                display: flex;
+                justify-self: center;
+                align-items: center;
+            }
+        }
+    }
+    #saleProduct{
+        .productGroup{
+            box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
+            background-color: #fff;
+            padding: 10px 0 20px;
+            border-radius: 40px;
+            width: 47%;   // 한 줄에 상품 2개 정렬
+            margin-bottom: 40px;
+            &:nth-child(n+1){   // 홀수번째 왼쪽 정렬
+                float: left;
+            }
+            &:nth-child(2n){   // 짝수번째 왼쪽 정렬
+                float: right;
+            }
+            .product{
+                p{
+                    // 상품명 속성
+                    padding: 20px 0 20px 40px;
+                    font-weight: 800;   // 폰트 두께 두껍게
+                    word-spacing: 5px;   // 글자 사이 공백 크기
+                    font-size: 30px;
+                }
+            }
+            .contents{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);   // 세로를 비율만큼 3등분
+                grid-template-areas: 'a b';   // 세로 영역을 a, b로 나눔
+                height: 200px;
+                padding: 0 40px;
+                .img{
+                    img{
+                        grid-area: a;
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+                .price{
+                    grid-area: b;
+                    position: relative;   // 포지션이 absolute인 것의 부모
+                    .original{
+                        @include translate($location: (-50%, -110%));   // 포지션인 relative의 자식, 정가운데 정렬
+                        font-size: 25px;
+                        text-decoration: line-through;   // 글자 중간에 직선
+                    }
+                    .salePrice{
+                        @include translate($location: (-50%, 10%));   // 포지션인 relative의 자식, 정가운데 정렬
+                        font-size: 35px;
+                        color: red;
+                        font-weight: 800;   // 폰트 두께 두껍게
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        text-align: center;
+        #noProduct{
+            display: inline-block;
+            margin: 40px 0;
+            font-size: 25px;
+        }
+    }
+}

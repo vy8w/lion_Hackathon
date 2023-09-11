@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- {% load static %} -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7/26 ~ 8/8 할인</title>
+    <!-- 모달창 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="{% static './js/FirstSale.js' %}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="firstSaleCopy.css">
+    <link rel="stylesheet" href="mediaCopy.css">
+</head>
+<body>
+    <div id="header">
+        <header>
+            <p>여기 있어</p>
+        </header>
+    </div>
+    </div>
+        <div id="container">
+        <div class="grid-sizer"></div>
+        <div id="saleProduct" class="grid">
+            <!-- {% for product in filtered_products %} -->
+            <div class="productGroup">
+                <div class="product">
+                    <!-- <h3>{{ product.product_name }}</h3> -->
+                    <p>맛있는 풋사과</p>
+                </div>
+                <!-- {% load humanize %} -->
+                <div class="contents">
+                    <div class="img">
+                        <!-- <img src="{{ product.product_image.url }}" alt=""> -->
+                        <img src="img/frozenFood-snack.png" alt="">
+                    </div>
+                    <div class="price">
+                        <!-- <p class="original">{{ product.regular_price | floatformat:'0' | intcomma }}원</p>
+                        <p class="salePrice">{{ product.discount_price | floatformat:'0' | intcomma }}원</p> -->
+                        <p class="original">25000원</p>
+                        <p class="salePrice">20000원</p>
+                    </div>
+                    <div class="etc">
+                        <p class="stockTxt">재고 3개</p>
+                        <button class="rsv" type="button" data-toggle="modal" data-target="#myModal">예약하기</button>
+                        <!-- 부트스트랩의 모달 창을 사용할려면 아래의 class 이름들을 그대로 사용해야 한다. 변경하면 모양이 달라진다.-->
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog"> <!-- 사용자 지정 부분① : id명 -->
+                            <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h2 class="modal-title">예약하기</h2> <!-- 사용자 지정 부분② : 타이틀 -->
+                                </div>
+                                <div class="modal-body">
+                                    <p>상품을 예약하고 당일에 결제하러 오세요</p> <!-- 사용자 지정 부분③ : 텍스트 메시지 -->
+                                    <span class="box">
+                                        <select id="gender" class="sel">
+                                            <option value selected>개수</option>
+                                            <option value="One">1</option>
+                                            <option value="Two">2</option>
+                                            <option value="Three">3</option>
+                                            <option value="Four">4</option>
+                                            <option value="Five">5</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="productGroup">
+                <div class="product">
+                    <!-- <h3>{{ product.product_name }}</h3> -->
+                    <p>맛있는 풋사과</p>
+                </div>
+                <!-- {% load humanize %} -->
+                <div class="contents">
+                    <div class="img">
+                        <!-- <img src="{{ product.product_image.url }}" alt=""> -->
+                        <img src="img/etc.png" alt="">
+                    </div>
+                    <div class="price">
+                        <!-- <p class="original">{{ product.regular_price | floatformat:'0' | intcomma }}원</p>
+                        <p class="salePrice">{{ product.discount_price | floatformat:'0' | intcomma }}원</p> -->
+                        <p class="original">25000원</p>
+                        <p class="salePrice">20000원</p>
+                    </div>
+                    <div class="stock">
+                        <p class="stockTxt">재고 3개</p>
+                    </div>
+                </div>
+            </div>
+            <div class="productGroup">
+                <div class="product">
+                    <!-- <h3>{{ product.product_name }}</h3> -->
+                    <p>맛있는 풋사과</p>
+                </div>
+                <!-- {% load humanize %} -->
+                <div class="contents">
+                    <div class="img">
+                        <!-- <img src="{{ product.product_image.url }}" alt=""> -->
+                        <img src="img/rice-kimchi.png" alt="">
+                    </div>
+                    <div class="price">
+                        <!-- <p class="original">{{ product.regular_price | floatformat:'0' | intcomma }}원</p>
+                        <p class="salePrice">{{ product.discount_price | floatformat:'0' | intcomma }}원</p> -->
+                        <p class="original">25000원</p>
+                        <p class="salePrice">20000원</p>
+                    </div>
+                    <div class="stock">
+                        <p class="stockTxt">재고 3개</p>
+                    </div>
+                </div>
+            </div>
+            <!-- {% empty %} -->
+            <!-- {% endfor %} -->
+        </div>
+        <footer>
+            <p id="noProduct">선택한 카테고리에 해당하는 상품이 없습니다.</p>
+        </footer>
+        <!-- <script src="firstSale.js"></script> -->
+    </div>
+</body>

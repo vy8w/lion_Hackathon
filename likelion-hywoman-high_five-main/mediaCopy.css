@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* 
+margin: auto; 가운데 정렬 참고 사이트
+https://www.codeit.kr/community/questions/UXVlc3Rpb246NWU1ZmMwNTlkNDQyYWMxZGI5YTMzY2I2
+*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    margin: 0 40px;
+    text-align: center;
+  }
+  body #nav nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "a b c" "d e f";
+  }
+  body #saleProduct .productGroup {
+    height: 500px;
+  }
+  body #saleProduct .productGroup .product p {
+    padding: 15px 0;
+    font-size: 40px;
+  }
+  body #saleProduct .productGroup .contents {
+    display: block;
+    padding: 0;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "a" "b" "c";
+    height: 250px;
+  }
+  body #saleProduct .productGroup .contents .img {
+    display: block;
+  }
+  body #saleProduct .productGroup .contents .etc {
+    grid-area: c;
+    padding: 20px 0;
+  }
+  body #saleProduct .productGroup .contents .etc .stockTxt{
+    transform: translate(-50%, -120%)!important;
+    margin: 5px 0;
+  }
+  body #saleProduct .productGroup .contents .etc .rsv{
+    position: inherit;
+    transform: translate(0);
+    left: 0%;
+    top: 0%;
+    width: 80%!important;
+  }
+  body #saleProduct .productGroup .contents .price {
+    grid-area: b;
+    position: inherit;
+    padding: 20px 0;
+  }
+  body #saleProduct .productGroup .contents .price .original {
+    position: inherit;
+    width: 100%;
+    transform: translate(0);
+    left: 0%;
+    top: 0%;
+  }
+  body #saleProduct .productGroup .contents .price .salePrice {
+    position: inherit;
+    width: 100%;
+    transform: translate(0%);
+    left: 0;
+    top: 0;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    margin: 0px;
+    text-align: center;
+  }
+  body #header {
+    margin: 40px 0;
+  }
+  body #header p {
+    padding: 0;
+    font-size: 60px;
+  }
+  body #saleProduct {
+    margin: 0 20px;
+    overflow: hidden;
+  }
+  body #saleProduct .productGroup {
+    width: 100%;
+    margin-bottom: 60px;
+    height: 100%;
+  }
+  body #saleProduct .productGroup .product p {
+    display: block;
+    margin: 20px 0;
+    font-size: 45px;
+    padding: 10px 0;
+  }
+  body #saleProduct .productGroup .contents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'a b' 'c c';
+    position: relative;
+  }
+  body #saleProduct .productGroup .contents .img {
+    flex-basis: 50%;
+    /* @extend %origin; */
+    transform: translate(0%);
+    position: inherit;
+    left: 0%;
+    top: 0%;
+  }
+  body #saleProduct .productGroup .contents .price {
+    flex-basis: 50%;
+    /* @extend %origin; */
+    transform: translate(0%);
+    position: relative;
+    left: 0%;
+    top: 0%;
+  }
+  body #saleProduct .productGroup .contents .etc {
+    grid-area: c;
+    position: relative;
+    padding: 20px 0; 
+    height: 100px;
+  }
+  #container #saleProduct .productGroup .contents .etc .stockTxt{
+    transform: translate(-50%, -120%);
+    margin-top: 5px;
+  }
+  body #saleProduct .productGroup .contents .etc .rsv{
+    width: 80%;
+  }
+  body #saleProduct .productGroup .contents .price .original {
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -100%);
+    left: 50%;
+    top: 50%;
+    font-size: 35px;
+  }
+  body #saleProduct .productGroup .contents .price .salePrice {
+    position: absolute;
+    transform: tranislate(-50%, 0%);
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    font-size: 42px;
+  }
+  body footer #noProduct {
+    font-size: 2.19em;
+  }
+}
